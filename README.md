@@ -2,7 +2,7 @@
 
 Below are the sequence of steps followed to build, run and trigger ETL process of my application. 
 
-Installed Applications: Docker Destop 4.20.1, Python 3.11 (latest), PostgreSql 15.3
+**Installed Applications: Docker Destop 4.20.1, Python 3.11 (latest), PostgreSql 15.3**
 
 **Step 1:**
  
@@ -225,6 +225,7 @@ The following is the output **after triggering the ETL process through curl as s
 **Second snip** below shows the output message that **"Records were already inserted and duplicate records are not valid."** which means the no duplicates are inserted into the processed_data table [as user_id is the PK] in Postgres.
 
 The insert statement in postgres finds if there is any conflict in the insertion then it would do nothing.
+![image](https://github.com/Dipriya/Python_Docker_ETL_API/assets/84637764/5e13597e-62bf-46d7-9cc4-a1b82f1e0796)
 
      python src/app.py
      
@@ -252,6 +253,13 @@ The insert statement in postgres finds if there is any conflict in the insertion
     
     127.0.0.1 - - [11/Jun/2023 18:28:36] "GET /trigger_etl HTTP/1.1" 200 -
     
-    
+ **Ouput Results Screenshots - processed_data table in Postgres**
+ 
+ ![image](https://github.com/Dipriya/Python_Docker_ETL_API/assets/84637764/058adccf-54b1-4822-8ffb-d6c0ef489b4d)
+ 
+ ![image](https://github.com/Dipriya/Python_Docker_ETL_API/assets/84637764/db0e07c6-f466-4963-9062-d77f3c70fbf4)
+
+************************************************************************************************************************
+
     
     
